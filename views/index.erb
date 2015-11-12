@@ -1,3 +1,13 @@
-<h2>Welcome to PizzaShop</h2>
-<button class="btn btn-primary btn-large" onclick="javascript:say_hello()">Click Me</button>
-
+<div class="row">
+  <% @products.each do |row| %>
+  <div class="col-md-4">
+    <div class="title"><h2><%= row['title'] %></h2></div>
+    <img src="<%= row['path_to_image'] %>"/>
+    <p>Description: <%= row['description'] %></p>
+    <p><strong><%= row['price'] %> RUB</strong></p>
+    <div class="order_place">
+      <button class="btn btn-primary order_button">Add to Cart</button>
+    </div>
+  </div>
+  <% end %>
+</div>
