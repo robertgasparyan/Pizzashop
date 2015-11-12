@@ -6,7 +6,7 @@
     <p>Description: <%= row['description'] %></p>
     <p><strong><%= row['price'] %> RUB</strong></p>
     <div class="order_place">
-      <button class="btn btn-primary order_button">Add to Cart</button>
+      <button class="btn btn-primary order_button" onclick='add_to_cart(<%= row['id'] %>)'>Add to Cart</button>
     </div>
   </div>
   <% end %>
